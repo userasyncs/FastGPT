@@ -79,7 +79,7 @@ const PluginCard = ({
 
       <Flex w={'full'} fontSize={'mini'}>
         <Flex flex={1}>
-          {(item.instructions || item.courseUrl) && (
+          {/* {(item.instructions || item.courseUrl) && (
             <UseGuideModal
               title={item.name}
               iconSrc={item.avatar}
@@ -100,7 +100,7 @@ const PluginCard = ({
                 </Flex>
               )}
             </UseGuideModal>
-          )}
+          )} */}
         </Flex>
         <Box color={'myGray.500'}>{`by ${item.author || feConfigs.systemTitle}`}</Box>
       </Flex>
