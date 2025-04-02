@@ -150,8 +150,8 @@ const FormLayout = ({ children, setPageType, pageType }: Props) => {
   return (
     <Flex flexDirection={'column'} h={'100%'}>
       <Flex alignItems={'center'} justify={'space-between'}>
-        <Flex alignItems={'center'}>
-          <Flex
+        <Flex alignItems={'center'} justifyContent="center" w="100%" m="28px 0 70px 0">
+          {/* <Flex
             w={['42px', '56px']}
             h={['42px', '56px']}
             bg={'myGray.25'}
@@ -165,7 +165,20 @@ const FormLayout = ({ children, setPageType, pageType }: Props) => {
           </Flex>
           <Box ml={[3, 5]} fontSize={['lg', 'xl']} fontWeight={'bold'} color={'myGray.900'}>
             {feConfigs?.systemTitle}
-          </Box>
+          </Box> */}
+          <Flex
+            w={['100%', '100%']}
+            h={['54px', '54px']}
+            alignItems={'center'}
+            justifyContent={'center'}
+          >
+            <MyImage
+              src="/icon/login/login-logo.png"
+              w={['180px', '180px']}
+              h={['54px', '54px']}
+              alt={'icon'}
+            />
+          </Flex>
         </Flex>
         {!isPc && <I18nLngSelector />}
       </Flex>

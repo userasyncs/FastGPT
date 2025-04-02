@@ -10,7 +10,7 @@ import { getDocPath } from '@/web/common/system/doc';
 import { useTranslation } from 'next-i18next';
 import FormLayout from './FormLayout';
 import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-
+import MyImage from '@fastgpt/web/components/common/Image/MyImage';
 interface Props {
   setPageType: Dispatch<`${LoginPageTypeEnum}`>;
   loginSuccess: (e: ResLogin) => void;
@@ -79,26 +79,60 @@ const LoginForm = ({ setPageType, loginSuccess }: Props) => {
           }
         }}
       >
-        <FormControl isInvalid={!!errors.username}>
+        <FormControl isInvalid={!!errors.username} position="relative">
+          <Flex position="absolute" left="16px" top="0" zIndex={4} h="46px" alignItems="center">
+            <MyImage
+              src="/icon/login/username-icon.svg"
+              w={['20px', '20px']}
+              h={['24px', '24px']}
+            ></MyImage>
+            <Box w="2px" h="16px" bg="rgba(51, 112, 255, .2)" ml="10px"></Box>
+          </Flex>
           <Input
-            bg={'myGray.50'}
+            bg={'#E9F1F9'}
+            borderRadius={'10px'}
+            pl="66px"
+            fontSize="15px"
+            color="#000"
             size={'lg'}
+            h={[10, '46px']}
             placeholder={placeholder}
             {...register('username', {
               required: true
             })}
+            _placeholder={{
+              color: 'rgba(0,0,0,0.6)',
+              fontSize: '15px'
+            }}
           ></Input>
         </FormControl>
-        <FormControl mt={7} isInvalid={!!errors.password}>
+        <FormControl mt="20px" isInvalid={!!errors.password} position="relative">
+          <Flex position="absolute" left="16px" top="0" zIndex={4} h="46px" alignItems="center">
+            <MyImage
+              src="/icon/login/password-icon.svg"
+              w={['20px', '20px']}
+              h={['26px', '26px']}
+            ></MyImage>
+            <Box w="2px" h="16px" bg="rgba(51, 112, 255, .2)" ml="10px"></Box>
+          </Flex>
           <Input
-            bg={'myGray.50'}
+            bg={'#E9F1F9'}
+            borderRadius={'10px'}
+            pl="66px"
+            fontSize="15px"
+            color="#000"
             size={'lg'}
             type={'password'}
+            h={[10, '46px']}
             placeholder={
               isCommunityVersion
                 ? t('login:root_password_placeholder')
                 : t('common:support.user.login.Password')
             }
+            _placeholder={{
+              color: 'rgba(0,0,0,0.6)',
+              fontSize: '15px'
+            }}
             {...register('password', {
               required: true,
               maxLength: {
@@ -138,12 +172,14 @@ const LoginForm = ({ setPageType, loginSuccess }: Props) => {
 
         <Button
           type="submit"
-          my={5}
+          mt="80px"
           w={'100%'}
           size={['md', 'md']}
-          h={[10, 10]}
-          fontWeight={['medium', 'medium']}
-          colorScheme="blue"
+          h={[10, '46px']}
+          borderRadius={['0', '10px']}
+          fontWeight={['500', '500']}
+          fontSize={['20px', '20px']}
+          colorScheme="#3370FF"
           isLoading={requesting}
           onClick={handleSubmit(onclickLogin)}
         >

@@ -86,6 +86,11 @@ const Login = ({ ChineseRedirectUrl }: { ChineseRedirectUrl: string }) => {
     return <Component setPageType={setPageType} loginSuccess={loginSuccess} />;
   }, [pageType, loginSuccess]);
 
+  // 跳转官网
+  const handleGoToOfficial = useCallback(() => {
+    window.open('https://www.fosdata-iot.com/', '_blank');
+  }, []);
+
   /* default login type */
   useEffect(() => {
     const bd_vid = sessionStorage.getItem('bd_vid');
@@ -144,10 +149,9 @@ const Login = ({ ChineseRedirectUrl }: { ChineseRedirectUrl: string }) => {
       )}
 
       <Flex
-        alignItems={'center'}
-        justifyContent={'center'}
-        bg={`url(${getWebReqUrl('/icon/login-bg.svg')}) no-repeat`}
-        backgroundSize={'cover'}
+        position={'relative'}
+        bg={`url(${getWebReqUrl('/icon/login/login-bg.png')}) no-repeat`}
+        backgroundSize={'100% 100%'}
         userSelect={'none'}
         h={'100%'}
       >
@@ -158,18 +162,19 @@ const Login = ({ ChineseRedirectUrl }: { ChineseRedirectUrl: string }) => {
         )}
         <Flex
           flexDirection={'column'}
-          w={['100%', '556px']}
-          h={['100%', '677px']}
+          position={'absolute'}
+          top={'50%'}
+          right={'15.85vw'}
+          transform={'translateY(-50%)'}
+          w={['100%', '520px']}
+          h={['100%', '620px']}
           bg={'white'}
-          px={['5vw', '88px']}
-          py={['5vh', '64px']}
-          borderRadius={[0, '16px']}
-          boxShadow={[
-            '',
-            '0px 32px 64px -12px rgba(19, 51, 107, 0.20), 0px 0px 1px 0px rgba(19, 51, 107, 0.20)'
-          ]}
+          px={['5vw', '50px']}
+          py={['5vh', '40px']}
+          boxShadow={['', '0px 2px 8px 0px rgba(78,106,142,0.3)']}
+          boxSizing="border-box"
         >
-          <Box w={['100%', '380px']} flex={'1 0 0'}>
+          <Box w={['100%', '100%']} flex={'1 0 0'}>
             {pageType ? (
               DynamicComponent
             ) : (
@@ -178,19 +183,33 @@ const Login = ({ ChineseRedirectUrl }: { ChineseRedirectUrl: string }) => {
               </Center>
             )}
           </Box>
-          {feConfigs?.concatMd && (
-            <Box
-              mt={8}
-              color={'primary.700'}
-              fontSize={'mini'}
-              fontWeight={'medium'}
-              cursor={'pointer'}
-              textAlign={'center'}
-              onClick={onOpen}
-            >
-              {t('common:support.user.login.can_not_login')}
-            </Box>
-          )}
+          <Flex justifyContent="center">
+            {
+              <Box
+                mt={8}
+                mr="5px"
+                fontSize={'14px'}
+                color={'#646464'}
+                fontWeight={'medium'}
+                textAlign={'center'}
+              >
+                {t('common:support.user.login.can_not_login')}
+              </Box>
+            }
+            {
+              <Box
+                mt={8}
+                color={'#3370FF'}
+                fontSize={'14px'}
+                fontWeight={'medium'}
+                cursor={'pointer'}
+                textAlign={'center'}
+                onClick={handleGoToOfficial}
+              >
+                {t('common:support.user.login.contact_us')}
+              </Box>
+            }
+          </Flex>
         </Flex>
 
         {isOpen && <CommunityModal onClose={onClose} />}
