@@ -413,8 +413,8 @@ export const createFileToken = (data: FileTokenQuery) => {
   const key = (process.env.FILE_TOKEN_KEY as string) ?? 'filetoken';
   const token = jwt.sign(
     {
-      ...data,
-      exp: expiredTime
+      ...data
+      // exp: expiredTime
     },
     key
   );
