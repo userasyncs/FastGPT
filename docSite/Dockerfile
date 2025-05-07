@@ -7,6 +7,6 @@ RUN cd /app/hugo && hugo mod get -u github.com/colinwilson/lotusdocs@6d0568e && 
 
 FROM fholzer/nginx-brotli:latest
 
-LABEL org.opencontainers.image.source https://github.com/labring/FastGPT
+LABEL org.opencontainers.image.source https://github.com/userasyncs/FastGPT
 
 COPY --from=builder /app/hugo/public /usr/share/nginx/html
