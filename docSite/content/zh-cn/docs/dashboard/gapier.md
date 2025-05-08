@@ -1,19 +1,19 @@
 ---
 title: "使用 Gapier 快速导入Agent工具"
-description: "FastGPT 使用 Gapier 快速导入Agent工具"
+description: "专心小智 使用 Gapier 快速导入Agent工具"
 icon: "build"
 draft: false
 toc: true
 weight: 280
 ---
 
-FastGPT V4.7版本加入了工具调用，可以兼容 GPTs 的 Actions。这意味着，你可以直接导入兼容 GPTs 的 Agent 工具。
+专心小智 V4.7版本加入了工具调用，可以兼容 GPTs 的 Actions。这意味着，你可以直接导入兼容 GPTs 的 Agent 工具。
 
 Gapier 是一个在线 GPTs Actions工具，提供了50多种现成工具，并且每天有免费额度进行测试，方便用户试用，官方地址为：[https://gapier.com/](https://gapier.com/)。
 
 ![](/imgs/gapierToolResult1.webp)
 
-现在，我们开始把 Gapier 的工具导入到 FastGPT 中。
+现在，我们开始把 Gapier 的工具导入到 专心小智 中。
 
 ## 1. 创建插件
 
@@ -51,7 +51,7 @@ Gapier 是一个在线 GPTs Actions工具，提供了50多种现成工具，并�
 
 ### 不同模型的区别
 
-不同模型调用工具采用不同的方法，有些模型支持 toolChoice 和 functionCall 效果会更好。不支持这两种方式的模型通过提示词调用，但是效果不是很好，并且为了保证顺利调用，FastGPT内置的提示词，仅支持每次调用一个工具。
+不同模型调用工具采用不同的方法，有些模型支持 toolChoice 和 functionCall 效果会更好。不支持这两种方式的模型通过提示词调用，但是效果不是很好，并且为了保证顺利调用，专心小智内置的提示词，仅支持每次调用一个工具。
 
 具体哪些模型支持 functionCall 可以官网查看（当然，也需要OneAPI支持），同时需要调整模型配置文件中的对应字段（详细看配置字段说明）。
 

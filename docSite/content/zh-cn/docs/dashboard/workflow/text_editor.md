@@ -1,6 +1,6 @@
 ---
 title: "文本拼接"
-description: "FastGPT 文本加工模块介绍"
+description: "专心小智 文本加工模块介绍"
 icon: "input"
 draft: false
 toc: true

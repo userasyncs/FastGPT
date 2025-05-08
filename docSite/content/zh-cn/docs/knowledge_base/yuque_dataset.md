@@ -1,6 +1,6 @@
 ---
 title: '语雀文件库'
-description: 'FastGPT 语雀文件库功能介绍和使用方式'
+description: '专心小智 语雀文件库功能介绍和使用方式'
 icon: 'language'
 draft: false
 toc: true
@@ -11,7 +11,7 @@ weight: 405
 | --- | --- |
 | ![alt text](/imgs/image-31.png) | ![alt text](/imgs/image-32.png) |
 
-FastGPT v4.8.16 版本开始，商业版用户支持语雀文件库导入，用户可以通过配置语雀的 token 和 uid 来导入语雀文档库。目前处于测试阶段，部分交互有待优化。
+专心小智 v4.8.16 版本开始，商业版用户支持语雀文件库导入，用户可以通过配置语雀的 token 和 uid 来导入语雀文档库。目前处于测试阶段，部分交互有待优化。
 
 ## 1. 获取语雀的 token 和 uid
 

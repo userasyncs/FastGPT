@@ -1,6 +1,6 @@
 ---
 title: "变量更新"
-description: "FastGPT 变量更新模块介绍"
+description: "专心小智 变量更新模块介绍"
 icon: "variable_update"
 draft: false
 toc: true

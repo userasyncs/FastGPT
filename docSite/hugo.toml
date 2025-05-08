@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/"
+baseURL = "/"
 languageCode = "en-GB"
 contentDir = "content"
 enableEmoji = true
@@ -8,12 +8,12 @@ defaultContentLanguage = 'zh-cn'
 defaultContentLanguageInSubdir = false
 [languages]
   [languages.zh-cn]
-    title = "FastGPT"
+    title = "专心小智"
     languageName = "简体中文"
     contentDir = "content/zh-cn"
     weight = 10
   [languages.en]
-    title = "FastGPT Docs"
+    title = "zxzz"
     languageName = "English"
     contentDir = "content/en"
     weight = 10
@@ -50,6 +50,8 @@ defaultContentLanguageInSubdir = false
 
 [params]
 
+ aiName = "专心小智"
+
   google_fonts = [
     ["Inter", "300, 400, 600, 700"],
     ["Fira Code", "500, 700"],
@@ -61,7 +63,7 @@ defaultContentLanguageInSubdir = false
   mono_font       = "JetBrains Mono" # Default is System font
 
     [params.footer]
-        copyright = "© :YEAR: the FastGPT Authors."
+        copyright = "© :YEAR: the 专心智制 Authors."
         version = false # includes git commit info
 
     [params.social]
@@ -114,7 +116,7 @@ defaultContentLanguageInSubdir = false
         # Link behaviour
         intLinkTooltip  = true                                # Enable a tooltip for internal links that displays info about the destination? default false
         # extLinkNewTab   = false                             # Open external links in a new Tab? default true
-        logoLinkURL = "http://localhost:1313/"                                    # Set a custom URL destination for the top header logo link.
+        logoLinkURL = "/docs"                                    # Set a custom URL destination for the top header logo link.
 
     [params.flexsearch] # Parameters for FlexSearch
         # enabled             = true
@@ -169,6 +171,9 @@ defaultContentLanguageInSubdir = false
     url = "docs/"
     identifier = "docs"
     weight = 10
+
+
+
 
 # [[menu.primary]]
 #     name  = "Showcase"

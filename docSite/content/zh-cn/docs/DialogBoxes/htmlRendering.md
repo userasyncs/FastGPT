@@ -1,6 +1,6 @@
 ---
 title: "对话框与HTML渲染"
-description: "如何在FastGPT中通过Markdown嵌入HTML代码块，并提供全屏、源代码切换等交互功能"
+description: "如何在专心小智中通过Markdown嵌入HTML代码块，并提供全屏、源代码切换等交互功能"
 icon: "group"
 draft: false
 toc: true
@@ -18,7 +18,7 @@ weight: 470
 
 ### 2. 功能简介
 
-  该功能模块的主要目的是扩展FastGPT在Markdown渲染中的能力，支持嵌入和渲染HTML内容。由于是利用 Iframe 渲染，所以无法确认内容的高度，FastGPT 中会给 Iframe 设置一个固定高度来进行渲染。并且不支持 HTML 中执行 js 脚本。
+  该功能模块的主要目的是扩展专心小智在Markdown渲染中的能力，支持嵌入和渲染HTML内容。由于是利用 Iframe 渲染，所以无法确认内容的高度，专心小智 中会给 Iframe 设置一个固定高度来进行渲染。并且不支持 HTML 中执行 js 脚本。
 
 ### 3. 技术实现
 
@@ -40,7 +40,7 @@ weight: 470
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>欢迎使用FastGPT</title>
+    <title>欢迎使用专心小智</title>
   </head>
   <body>
     <nav>

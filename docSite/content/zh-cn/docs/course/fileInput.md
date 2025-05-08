@@ -1,13 +1,13 @@
 ---
 title: '文件输入功能介绍'
-description: 'FastGPT 文件输入功能介绍'
+description: '专心小智 文件输入功能介绍'
 icon: 'description'
 draft: false
 toc: true
 weight: 110
 ---
 
-从 4.8.9 版本起，FastGPT 支持在`简易模式`和`工作流`中，配置用户上传文件、图片功能。下面先简单介绍下如何使用文件输入功能，最后是介绍下文件解析的工作原理。
+从 4.8.9 版本起，专心小智 支持在`简易模式`和`工作流`中，配置用户上传文件、图片功能。下面先简单介绍下如何使用文件输入功能，最后是介绍下文件解析的工作原理。
 
 
 ## 简易模式中使用
@@ -48,7 +48,7 @@ weight: 110
 
 ### 上传的文件如何存储在数据库中
 
-FastGPT 的对话记录存储结构中，role=user 的消息，value 值会按以下结构存储：
+专心小智 的对话记录存储结构中，role=user 的消息，value 值会按以下结构存储：
 
 ```ts
 type UserChatItemValueItemType = {

@@ -1,7 +1,7 @@
 ---
-title: "邀请链接说明文档"
-description: "如何使用邀请链接来邀请团队成员"
-icon: "group"
+title: '邀请链接说明文档'
+description: '如何使用邀请链接来邀请团队成员'
+icon: 'group'
 draft: false
 toc: true
 weight: 451
@@ -37,7 +37,7 @@ v4.9.1 团队邀请成员将开始使用「邀请链接」的模式，弃用之�
 
 5. **用户访问链接后，如果未登录/未注册，则先跳转到登录页面进行登录。在登录后将进入团队页面，处理邀请。**
 
-> 邀请链接形如：fastgpt.cn/account/team?invitelinkid=xxxx
+> 邀请链接形如：ai.anosi.cn/account/team?invitelinkid=xxxx
 
 ![](/imgs/guide/team_permissions/invitation_link/image5.png)
 

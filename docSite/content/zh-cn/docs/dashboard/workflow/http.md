@@ -1,6 +1,6 @@
 ---
 title: "HTTP 请求"
-description: "FastGPT HTTP 模块介绍"
+description: "专心小智 HTTP 模块介绍"
 icon: "http"
 draft: false
 toc: true
@@ -69,8 +69,8 @@ HTTP 模块会向对应的地址发送一个 `HTTP` 请求，实际操作与 Pos
   "boolean": true,
   "array": [1, 2, 3],
   "obj": {
-    "name": "FastGPT",
-    "url": "https://tryfastgpt.ai"
+    "name": "专心小智",
+    "url": "https://ai.anosi.cn"
   }
 }
 ```
@@ -108,8 +108,8 @@ HTTP 模块会向对应的地址发送一个 `HTTP` 请求，实际操作与 Pos
   "array": [123, "字符串"],
   "array2": [1, 2, 3],
   "object": {
-    "name": "FastGPT",
-    "url": "https://tryfastgpt.ai"
+    "name": "专心小智",
+    "url": "https://ai.anosi.cn"
   }
 }
 ```
@@ -120,7 +120,7 @@ HTTP 模块会向对应的地址发送一个 `HTTP` 请求，实际操作与 Pos
 
 ### 如何获取返回值
 
-从图中可以看出，FastGPT可以添加多个返回值，这个返回值并不代表接口的返回值，而是代表`如何解析接口返回值`，可以通过 `JSON path` 的语法，来`提取`接口响应的值。
+从图中可以看出，专心小智可以添加多个返回值，这个返回值并不代表接口的返回值，而是代表`如何解析接口返回值`，可以通过 `JSON path` 的语法，来`提取`接口响应的值。
 
 语法可以参考: https://github.com/JSONPath-Plus/JSONPath?tab=readme-ov-file
 
@@ -175,7 +175,7 @@ HTTP 模块会向对应的地址发送一个 `HTTP` 请求，实际操作与 Pos
 {{< /tabs >}}
 
 
-你可以配置对应的`key`来从`FastGPT 转化后的格式`获取需要的值，该规则遵守 JS 的对象取值规则。例如：
+你可以配置对应的`key`来从`专心小智 转化后的格式`获取需要的值，该规则遵守 JS 的对象取值规则。例如：
 
 1. 获取`message`的内容，那么你可以配置`message`的`key`为`message`，这样就可以获取到`message`的内容。
 2. 获取`user的name`，则`key`可以为：`data.user.name`。
@@ -183,7 +183,7 @@ HTTP 模块会向对应的地址发送一个 `HTTP` 请求，实际操作与 Pos
 
 ### 自动格式化输出
 
-FastGPT v4.6.8 后，加入了出参格式化功能，主要以`json`格式化成`字符串`为主。如果你的输出类型选择了`字符串`，则会将`HTTP`对应`key`的值，转成`json`字符串进行输出。因此，未来你可以直接从`HTTP`接口输出内容至`文本加工`中，然后拼接适当的提示词，最终输入给`AI对话`。
+专心小智 v4.6.8 后，加入了出参格式化功能，主要以`json`格式化成`字符串`为主。如果你的输出类型选择了`字符串`，则会将`HTTP`对应`key`的值，转成`json`字符串进行输出。因此，未来你可以直接从`HTTP`接口输出内容至`文本加工`中，然后拼接适当的提示词，最终输入给`AI对话`。
 
 
 {{% alert context="warning" %}}

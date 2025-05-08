@@ -1,7 +1,7 @@
 ---
-title: "代码运行"
-description: "FastGPT 代码运行节点介绍"
-icon: "input"
+title: '代码运行'
+description: '专心小智 代码运行节点介绍'
+icon: 'input'
 draft: false
 toc: true
 weight: 258
@@ -15,11 +15,10 @@ weight: 258
 
 **注意事项**
 
-- 私有化用户需要部署`fastgpt-sandbox` 镜像，并配置`SANDBOX_URL`环境变量。
+- 私有化用户需要部署`zxzz-sandbox` 镜像，并配置`SANDBOX_URL`环境变量。
 - 沙盒最大运行 10s， 32M 内存限制。
 
-
-## 变量输入 
+## 变量输入
 
 可在自定义输入中添加代码运行需要的变量，在代码的 main 函数中，可解构出相同名字的变量。
 
@@ -47,21 +46,21 @@ weight: 258
 延迟 1 秒后返回
 
 ```js
-async function main({data1, data2}){
-    await delay(1000)
-    return {
-        result: "111"
-    }
+async function main({ data1, data2 }) {
+  await delay(1000);
+  return {
+    result: '111'
+  };
 }
 ```
 
 ### countToken 统计 token
 
 ```js
-function main({input}){
-    return {
-        result: countToken(input)
-    }
+function main({ input }) {
+  return {
+    result: countToken(input)
+  };
 }
 ```
 
@@ -72,15 +71,14 @@ function main({input}){
 可用于将 SVG 图片转换为 base64 格式展示。
 
 ```js
-function main({input}){
-     
-    return {
-        /* 
+function main({ input }) {
+  return {
+    /* 
             param1: input 需要转换的字符串
             param2: base64 prefix 前缀
         */
-        result: strToBase64(input,'data:image/svg+xml;base64,')
-    }
+    result: strToBase64(input, 'data:image/svg+xml;base64,')
+  };
 }
 ```
 
@@ -91,11 +89,12 @@ function main({input}){
 与 node 中 crypto 的 createHmac 方法一致。
 
 ```js
-function main({secret}){
-    const {sign,timestamp} = createHmac('sha256',secret)
+function main({ secret }) {
+  const { sign, timestamp } = createHmac('sha256', secret);
 
-    return {
-        sign,timestamp
-    }
+  return {
+    sign,
+    timestamp
+  };
 }
 ```

@@ -1,6 +1,6 @@
 ---
 title: "AI 对话"
-description: "FastGPT AI 对话模块介绍"
+description: "专心小智 AI 对话模块介绍"
 icon: "chat"
 draft: false
 toc: true

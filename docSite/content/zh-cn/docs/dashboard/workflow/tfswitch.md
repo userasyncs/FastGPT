@@ -1,6 +1,6 @@
 ---
 title: "判断器"
-description: "FastGPT 判断器模块介绍"
+description: "专心小智 判断器模块介绍"
 icon: "input"
 draft: false
 toc: true

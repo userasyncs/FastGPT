@@ -1,13 +1,13 @@
 ---
 title: "SearXNG 搜索插件配置与使用说明"
-description: "FastGPT SearXNG 搜索插件配置指南"
+description: "专心小智 SearXNG 搜索插件配置指南"
 icon: "search"
 draft: false
 toc: true
 weight: 303
 ---
 
-[SearXNG](https://github.com/searxng/searxng)是一款免费的互联网元搜索引擎，它汇总了来自各种搜索服务和数据库的结果。它不会跟踪或分析用户。用户可以自行部署它进行使用。本文介绍 Searxng 的部署以及接入 FastGPT 插件。
+[SearXNG](https://github.com/searxng/searxng)是一款免费的互联网元搜索引擎，它汇总了来自各种搜索服务和数据库的结果。它不会跟踪或分析用户。用户可以自行部署它进行使用。本文介绍 Searxng 的部署以及接入 专心小智 插件。
 
 
 ## 1. 部署应用
@@ -142,9 +142,9 @@ default_doi_resolver: 'oadoi.org'
     shortcut: go
 ```
 
-## 3. FastGPT 使用
+## 3. 专心小智 使用
 
-复制 Sealos 部署后提供的公网地址，填入 FastGPT 的 SearXNG 插件的 URL 中。
+复制 Sealos 部署后提供的公网地址，填入 专心小智 的 SearXNG 插件的 URL 中。
 
 | 复制公网地址| 填入 URL |
 | --- | --- |

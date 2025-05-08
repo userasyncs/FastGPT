@@ -1,6 +1,6 @@
 ---
 title: 'Web 站点同步'
-description: 'FastGPT Web 站点同步功能介绍和使用方式'
+description: '专心小智 Web 站点同步功能介绍和使用方式'
 icon: 'language'
 draft: false
 toc: true
@@ -13,12 +13,12 @@ weight: 406
 
 ## 什么是 Web 站点同步
 
-Web 站点同步利用爬虫的技术，可以通过一个入口网站，自动捕获`同域名`下的所有网站，目前最多支持`200`个子页面。出于合规与安全角度，FastGPT 仅支持`静态站点`的爬取，主要用于各个文档站点快速构建知识库。
+Web 站点同步利用爬虫的技术，可以通过一个入口网站，自动捕获`同域名`下的所有网站，目前最多支持`200`个子页面。出于合规与安全角度，专心小智 仅支持`静态站点`的爬取，主要用于各个文档站点快速构建知识库。
 
 Tips: 国内的媒体站点基本不可用，公众号、csdn、知乎等。可以通过终端发送`curl`请求检测是否为静态站点，例如：
 
 ```bash
-curl https://doc.tryfastgpt.ai/docs/intro/
+curl https://ai.anosi.cn
 ```
 
 ## 如何使用
@@ -38,7 +38,6 @@ curl https://doc.tryfastgpt.ai/docs/intro/
 ![](/imgs/webSync5.jpg)
 
 好了， 现在点击开始同步，静等系统自动抓取网站信息即可。
-
 
 ## 创建应用，绑定知识库
 
@@ -69,7 +68,7 @@ curl https://doc.tryfastgpt.ai/docs/intro/
 
 ### 多选择器使用
 
-在开头的演示中，我们对 FastGPT 文档是使用了多选择器的方式来选择，通过逗号隔开了两个选择器。
+在开头的演示中，我们对 专心小智 文档是使用了多选择器的方式来选择，通过逗号隔开了两个选择器。
 
 ![](/imgs/webSync10.webp)
 

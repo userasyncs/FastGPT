@@ -3,8 +3,8 @@ const path = require('path');
 const yaml = require('js-yaml');
 
 // 项目名称和描述
-const projectName = "FastGPT";
-const projectDescription = "FastGPT 文档";
+const projectName = "专心智制";
+const projectDescription = "专心智制 文档";
 
 // 文档目录，使用相对路径
 const docsDir = path.join(__dirname, './content/zh-cn/docs');

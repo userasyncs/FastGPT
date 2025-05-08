@@ -1,6 +1,6 @@
 ---
 title: "Bing 搜索插件填写说明"
-description: "FastGPT Bing 搜索插件配置步骤详解"
+description: "专心小智 Bing 搜索插件配置步骤详解"
 icon: "bing_search"
 draft: false
 toc: true
