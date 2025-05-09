@@ -9,7 +9,7 @@ weight: 102
 
 
 
-更多使用技巧，[查看视频教程](https://www.bilibili.com/video/BV1sH4y1T7s9)
+<!-- 更多使用技巧，[查看视频教程](https://www.bilibili.com/video/BV1sH4y1T7s9) -->
 
 ## 知识库
 

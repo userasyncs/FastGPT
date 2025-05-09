@@ -9,7 +9,7 @@ weight: 226
 
 专心小智 从 V4.0 版本开始采用新的交互方式来构建 AI 应用。使用了 Flow 节点编排（工作流）的方式来实现复杂工作流，提高可玩性和扩展性。但同时也提高了上手的门槛，有一定开发背景的用户使用起来会比较容易。
 
-[查看视频教程](https://www.bilibili.com/video/BV1is421u7bQ/)
+<!-- [查看视频教程](https://www.bilibili.com/video/BV1is421u7bQ/) -->
 
 ![](/imgs/flow-intro1.png)
 
