@@ -94,12 +94,14 @@ const defaultFeConfigs: FastGPTFeConfigsType = {
   show_emptyChat: true,
   // show_git: true,
   show_git: false,
-  // docUrl: 'https://doc.tryfastgpt.ai',
-  docUrl: '',
-  openAPIDocUrl: 'https://doc.tryfastgpt.ai/docs/development/openapi',
-  systemPluginCourseUrl: 'https://fael3z0zfze.feishu.cn/wiki/ERZnw9R26iRRG0kXZRec6WL9nwh',
-  appTemplateCourse:
-    'https://fael3z0zfze.feishu.cn/wiki/CX9wwMGyEi5TL6koiLYcg7U0nWb?fromScene=spaceOverview',
+  docUrl: 'http://ai.anosi.cn/docs',
+  // openAPIDocUrl: 'https://doc.tryfastgpt.ai/docs/development/openapi',
+  openAPIDocUrl: '',
+  // systemPluginCourseUrl: 'https://fael3z0zfze.feishu.cn/wiki/ERZnw9R26iRRG0kXZRec6WL9nwh',
+  systemPluginCourseUrl: '',
+  appTemplateCourse: '',
+  // appTemplateCourse:
+  // 'https://fael3z0zfze.feishu.cn/wiki/CX9wwMGyEi5TL6koiLYcg7U0nWb?fromScene=spaceOverview',
   systemTitle: '专心智制',
 
   // concatMd:
