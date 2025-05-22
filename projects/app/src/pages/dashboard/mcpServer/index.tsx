@@ -1,3 +1,4 @@
+'use client';
 import { serviceSideProps } from '@/web/common/i18n/utils';
 import React, { useState } from 'react';
 import DashboardContainer from '@/pageComponents/dashboard/Container';
@@ -18,14 +19,18 @@ import { useTranslation } from 'next-i18next';
 import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
 import { deleteMcpServer, getMcpServerList } from '@/web/support/mcp/api';
 import MyBox from '@fastgpt/web/components/common/MyBox';
-import EditMcpModal, { defaultForm, EditMcForm } from '@/pageComponents/dashboard/mcp/EditModal';
+import EditMcpModal, {
+  defaultForm,
+  type EditMcForm
+} from '@/pageComponents/dashboard/mcp/EditModal';
 import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
 import MyIconButton from '@fastgpt/web/components/common/Icon/button';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import { useConfirm } from '@fastgpt/web/hooks/useConfirm';
 import dynamic from 'next/dynamic';
-import { McpKeyType } from '@fastgpt/global/support/mcp/type';
+import { type McpKeyType } from '@fastgpt/global/support/mcp/type';
 import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import { useUserStore } from '@/web/support/user/useUserStore';
 
 const UsageWay = dynamic(() => import('@/pageComponents/dashboard/mcp/usageWay'), {
   ssr: false
@@ -34,6 +39,7 @@ const UsageWay = dynamic(() => import('@/pageComponents/dashboard/mcp/usageWay')
 const McpServer = () => {
   const { t } = useTranslation();
   const { isPc } = useSystem();
+  const { userInfo } = useUserStore();
 
   const {
     data: mcpServerList = [],
@@ -74,7 +80,10 @@ const McpServer = () => {
                     {t('dashboard_mcp:mcp_server_description')}
                   </Box>
                 </Box>
-                <Button onClick={() => setEditMcp(defaultForm)}>
+                <Button
+                  isDisabled={!userInfo?.permission.hasApikeyCreatePer}
+                  onClick={() => setEditMcp(defaultForm)}
+                >
                   {t('dashboard_mcp:create_mcp_server')}
                 </Button>
               </Flex>
@@ -90,7 +99,10 @@ const McpServer = () => {
                   {t('dashboard_mcp:mcp_server_description')}
                 </Box>
                 <Flex mt={2} justifyContent={'flex-end'}>
-                  <Button onClick={() => setEditMcp(defaultForm)}>
+                  <Button
+                    isDisabled={!userInfo?.permission.hasApikeyCreatePer}
+                    onClick={() => setEditMcp(defaultForm)}
+                  >
                     {t('dashboard_mcp:create_mcp_server')}
                   </Button>
                 </Flex>
